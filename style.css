@@ -1,0 +1,166 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Red Hat Display', sans-serif;
+    font-weight: 500;
+    color: #87879D;
+}
+
+h1,h2 {
+    font-weight: 900;
+    color: #28283D;
+}
+
+
+/* Utility */
+
+.btn {
+    display: inline-block;
+    margin: 8px;
+    padding: 16px 32px;
+    text-decoration: none;
+    color: #fafafa;
+    font-weight: 900;
+    border-radius: 30px;
+}
+
+.btn--blue {
+    background: #4D96A9;
+}
+.btn--blue:hover {
+    background: #8FE3F9;
+}
+
+.btn--purple {
+    background: #855FB1;
+}
+.btn--purple:hover {
+    background: #D9B8FF;
+}
+
+.section-seperator {
+    margin: 50px auto;
+    text-align: center;
+    font-weight: 900;
+}
+
+.section-seperator > div:nth-child(1) {
+    height: 100px;
+    width: 0;
+    margin: 0 auto;
+    border: 1px solid rgba(135, 135, 157, 0.2);
+}
+
+.section-seperator > div:nth-child(2) {
+    border: 1px solid rgba(135, 135, 157, 0.2);
+    padding: 16px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+}
+
+
+.brand {
+    width: 118px;
+    margin-bottom: 54px;
+}
+
+/* Main header */
+
+header.hero {
+    padding-top: 48px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    text-align: center;
+}
+
+.hero__cta__buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero h1 {
+    font-size: 40px;
+    padding: 0 24px;       
+}
+
+.hero__image {
+    /* display: inline-block; */
+    margin: auto;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Section */
+#section-1 {
+    margin: 24px 0;
+    text-align: center;
+}
+
+#section-1 .gallery {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+#section-1 img {
+    flex: 1;
+    max-width: 151px;
+    border-radius: 5px;  
+}
+
+#section-1 h1 {
+    font-size: 32px;
+
+}
+
+#section-1 h2 {
+    color: #4D96A9;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+
+}
+
+/* Footer */
+
+#main-footer {
+    background: #4D96A9;
+    height: 428px;
+    position: relative;
+    color: #fafafa;
+    text-align: center;
+    padding: 24px;
+}
+
+#main-footer::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url("assets/mobile/image-footer.jpg") center/cover no-repeat;
+    opacity: 0.1;
+}
+
+#main-footer h1 {
+    color: #fafafa;
+}
+
+#main-footer .section-seperator {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    /* transform: translateX(-50%); */
+}
