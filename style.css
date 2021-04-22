@@ -34,6 +34,7 @@ p {
     text-decoration: none;
     color: #fafafa;
     font-weight: 900;
+    font-size: 1rem;
     border-radius: 30px;
 }
 
@@ -72,40 +73,36 @@ p {
     user-select: none;
 }
 
-/* Main header */
+/* Header */
 
-.brand {
+#main-header {
+    margin-top: 48px;
+}
+
+#main-header .brand {
     width: 118px;
     margin-bottom: 54px;
 }
 
-header#main-header {
-    margin-top: 48px;
-}
-
-.hero-container {
-
-}
-
-.hero__image {
+#main-header .hero__background {
     height: 153px;
     background: url("assets/tablet/image-hero.png") center center / auto 100% no-repeat;
 }
 
-.hero__image:last-of-type {
+#main-header .hero__background:last-of-type {
     display: none;
 }
 
-.hero__cta__buttons {
+#main-header .hero__cta__buttons {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.hero h1 {
-    font-size: 40px;
+#main-header .hero__title {
+    font-size: 2.5rem;
     max-width: 280px;
-    margin: auto;      
+    margin: 48px auto;      
 }
 
 /* Section 1 */
@@ -129,12 +126,14 @@ header#main-header {
 }
 
 #section-1 h1 {
-    font-size: 32px;
+    font-size: 2rem;
+    max-width: 90%;
+    margin: 16px auto;
 }
 
 #section-1 h2 {
     color: #4D96A9;
-    font-size: 16px;
+    font-size: 1rem;
     text-transform: uppercase;
     letter-spacing: 4px;
 }
@@ -169,7 +168,8 @@ header#main-header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 428px;
+    min-height: 428px;
+    padding: 24px;
     z-index: 1;
     position: relative;
 }
@@ -185,7 +185,7 @@ header#main-header {
 }
 
 #main-footer p {
-    font-size: 18px;
+    font-size: 1.1rem;
 }
 
 #main-footer .btn {
@@ -215,27 +215,28 @@ header#main-header {
         max-width: 480px;
     }
 
-    .hero h1 {
-        font-size: 48px; 
+    #main-header .hero__title {
+        font-size: 3rem; 
         margin-top: 72px;
         max-width: 340px;
     }
 
-    .hero__image {
+    #main-header .hero__background {
         height: 303px;
     }
 
-    .hero__cta__buttons {
+    #main-header .hero__cta__buttons {
         flex-direction: row; 
         justify-content: center;
     }
 
     #section-1 h1 {
-        font-size: 40px;
+        font-size: 2.5rem;
+        max-width: 75%;
     }
 
     #main-footer h1 {
-        font-size: 40px;
+        font-size: 2.5rem;
     }
 
     #main-footer .main-footer__inner::after {
@@ -244,9 +245,13 @@ header#main-header {
 }
 
 /* Desktop */
-@media only screen and (min-width: 1025px) {
+@media only screen and (min-width: 1200px) {
 
-    .hero-container {
+    body {
+        font-size: 1.1rem;
+    }
+
+    #main-header .hero-container {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -257,22 +262,24 @@ header#main-header {
         max-width: 540px;
     }
 
-    .hero h1 {
+    #main-header .hero__title {
         margin-bottom: 16px;
     }
 
-    .hero__image {
+    #main-header .hero__background {
         flex: 1;
-        height: 358px;
+        max-height: 300px;
     }
 
-    .hero__image:first-of-type {
-        background: url("assets/desktop/image-hero-left.png") top right no-repeat;
+    #main-header .hero__background:first-of-type {
+        background: url("assets/desktop/image-hero-left.png") top right / auto 100% no-repeat;
+        align-self: flex-start;
     }
     
-    .hero__image:last-of-type {
+    #main-header .hero__background:last-of-type {
         display: block;
-        background: url("assets/desktop/image-hero-right.png") bottom left no-repeat;
+        background: url("assets/desktop/image-hero-right.png") bottom left / auto 100% no-repeat;
+        align-self: flex-end;
     }
 
     #section-1 .gallery img {
