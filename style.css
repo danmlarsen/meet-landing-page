@@ -13,6 +13,7 @@ body {
 h1,h2 {
     font-weight: 900;
     color: #28283D;
+    line-height: 1.1;
 }
 
 p {
@@ -102,6 +103,7 @@ p {
 #main-header .hero__title {
     font-size: 2.5rem;
     max-width: 280px;
+    line-height: 1;
     margin: 48px auto;      
 }
 
