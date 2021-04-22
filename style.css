@@ -6,8 +6,8 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Red Hat Display', sans-serif;
-    font-weight: 500;
     color: #87879D;
+    text-align: center;
 }
 
 h1,h2 {
@@ -15,8 +15,17 @@ h1,h2 {
     color: #28283D;
 }
 
+p {
+    font-weight: 500;
+}
 
 /* Utility */
+
+.container {
+    margin: auto;
+    padding: 0 24px;
+    max-width: 480px;
+}
 
 .btn {
     display: inline-block;
@@ -28,56 +37,63 @@ h1,h2 {
     border-radius: 30px;
 }
 
-.btn--blue {
-    background: #4D96A9;
-}
-.btn--blue:hover {
-    background: #8FE3F9;
-}
+.btn--blue { background: #4D96A9; }
+.btn--blue .btn--highlight { color: #8FE3F9; }
+.btn--blue:hover { background: #71C0D4; }
 
-.btn--purple {
-    background: #855FB1;
-}
-.btn--purple:hover {
-    background: #D9B8FF;
-}
+.btn--purple { background: #855FB1; }
+.btn--purple .btn--highlight { color: #D9B8FF; }
+.btn--purple:hover { background: #B18BDD; }
 
 .section-seperator {
-    margin: 50px auto;
-    text-align: center;
-    font-weight: 900;
+    margin: 64px auto;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .section-seperator > div:nth-child(1) {
-    height: 100px;
+    height: 84px;
     width: 0;
-    margin: 0 auto;
     border: 1px solid rgba(135, 135, 157, 0.2);
 }
 
 .section-seperator > div:nth-child(2) {
     border: 1px solid rgba(135, 135, 157, 0.2);
-    padding: 16px;
+    background: #fff;
     border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    margin: 0 auto;
+    width: 56px;
+    height: 56px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 900;
+    user-select: none;
 }
 
+/* Main header */
 
 .brand {
     width: 118px;
     margin-bottom: 54px;
 }
 
-/* Main header */
+header#main-header {
+    margin-top: 48px;
+}
 
-header.hero {
-    padding-top: 48px;
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-    text-align: center;
+.hero-container {
+
+}
+
+.hero__image {
+    height: 153px;
+    background: url("assets/tablet/image-hero.png") center center / auto 100% no-repeat;
+}
+
+.hero__image:last-of-type {
+    display: none;
 }
 
 .hero__cta__buttons {
@@ -88,60 +104,56 @@ header.hero {
 
 .hero h1 {
     font-size: 40px;
-    padding: 0 24px;       
+    max-width: 280px;
+    margin: auto;      
 }
 
-.hero__image {
-    /* display: inline-block; */
-    margin: auto;
-    object-fit: cover;
-    object-position: center;
-}
-
-/* Section */
-#section-1 {
-    margin: 24px 0;
-    text-align: center;
-}
+/* Section 1 */
 
 #section-1 .gallery {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
+    align-items: center;
     gap: 20px;
 }
 
-#section-1 img {
-    flex: 1;
-    max-width: 151px;
+#section-1 .gallery img {
+    width: 151px;
     border-radius: 5px;  
+}
+
+#section-1 .container {
+    margin-top: 65px;
+    margin-bottom: 69px;
 }
 
 #section-1 h1 {
     font-size: 32px;
-
 }
 
 #section-1 h2 {
     color: #4D96A9;
     font-size: 16px;
     text-transform: uppercase;
-    letter-spacing: 3px;
-
+    letter-spacing: 4px;
 }
 
 /* Footer */
 
 #main-footer {
+    padding-top: 112px;
+    position: relative;
+}
+
+#main-footer .main-footer__inner {
     background: #4D96A9;
-    height: 428px;
     position: relative;
     color: #fafafa;
     text-align: center;
-    padding: 24px;
 }
 
-#main-footer::after {
+#main-footer .main-footer__inner::after {
     content: '';
     position: absolute;
     top: 0;
@@ -152,8 +164,32 @@ header.hero {
     opacity: 0.1;
 }
 
+#main-footer .main-footer__inner .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 428px;
+    z-index: 1;
+    position: relative;
+}
+
+#main-footer h1,
+#main-footer p {
+    margin: 8px;
+}
+
 #main-footer h1 {
     color: #fafafa;
+    max-width: 350px;
+}
+
+#main-footer p {
+    font-size: 18px;
+}
+
+#main-footer .btn {
+    margin-top: 24px;
 }
 
 #main-footer .section-seperator {
@@ -163,4 +199,105 @@ header.hero {
     right: 0;
     margin: 0 auto;
     /* transform: translateX(-50%); */
+    z-index: 1;
+}
+
+/* Media queries */
+
+/* Tablet */
+@media only screen and (min-width: 600px) {
+
+    .container {
+        max-width: 620px;
+    }
+
+    #main-header .container {
+        max-width: 480px;
+    }
+
+    .hero h1 {
+        font-size: 48px; 
+        margin-top: 72px;
+        max-width: 340px;
+    }
+
+    .hero__image {
+        height: 303px;
+    }
+
+    .hero__cta__buttons {
+        flex-direction: row; 
+        justify-content: center;
+    }
+
+    #section-1 h1 {
+        font-size: 40px;
+    }
+
+    #main-footer h1 {
+        font-size: 40px;
+    }
+
+    #main-footer .main-footer__inner::after {
+        background-image: url("assets/tablet/image-footer.jpg");
+    }
+}
+
+/* Desktop */
+@media only screen and (min-width: 1025px) {
+
+    .hero-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #main-header .container {
+        margin: 0 90px;
+        max-width: 540px;
+    }
+
+    .hero h1 {
+        margin-bottom: 16px;
+    }
+
+    .hero__image {
+        flex: 1;
+        height: 358px;
+    }
+
+    .hero__image:first-of-type {
+        background: url("assets/desktop/image-hero-left.png") top right no-repeat;
+    }
+    
+    .hero__image:last-of-type {
+        display: block;
+        background: url("assets/desktop/image-hero-right.png") bottom left no-repeat;
+    }
+
+    #section-1 .gallery img {
+        width: 255px;
+    }
+
+    #main-footer .main-footer__inner .container {
+        flex-direction: row;
+        justify-content: space-between;
+        height: 308px;
+        max-width: 1110px;
+    }
+
+    #main-footer .main-footer__inner .container > * {
+        text-align: left;
+        width: 350px;
+    }
+    
+    #main-footer .main-footer__inner .container .btn {
+        text-align: center;
+        width: 193px;
+        margin: 0;
+    }
+
+    #main-footer .main-footer__inner::after {
+        background-image: url("assets/desktop/image-footer.jpg");
+    }
 }
