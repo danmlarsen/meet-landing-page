@@ -82,7 +82,7 @@ p {
 
 #main-header .brand {
     width: 118px;
-    margin-bottom: 54px;
+    margin-bottom: 48px;
 }
 
 #main-header .hero__background {
@@ -148,21 +148,16 @@ p {
 }
 
 #main-footer .main-footer__inner {
-    background: #4D96A9;
-    position: relative;
+    background-image: linear-gradient(
+        rgba(77, 150, 169, 0.9),
+        rgba(77, 150, 169, 0.9)
+      ),
+      url("assets/mobile/image-footer.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     color: #fafafa;
     text-align: center;
-}
-
-#main-footer .main-footer__inner::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: url("assets/mobile/image-footer.jpg") center/cover no-repeat;
-    opacity: 0.1;
 }
 
 #main-footer .main-footer__inner .container {
@@ -172,8 +167,6 @@ p {
     align-items: center;
     min-height: 428px;
     padding: 24px;
-    z-index: 1;
-    position: relative;
 }
 
 #main-footer h2,
@@ -200,7 +193,6 @@ p {
     left: 0;
     right: 0;
     margin: 0 auto;
-    /* transform: translateX(-50%); */
     z-index: 1;
 }
 
@@ -241,8 +233,12 @@ p {
         font-size: 2.5rem;
     }
 
-    #main-footer .main-footer__inner::after {
-        background-image: url("assets/tablet/image-footer.jpg");
+    #main-footer .main-footer__inner {
+        background-image: linear-gradient(
+            rgba(77, 150, 169, 0.9),
+            rgba(77, 150, 169, 0.9)
+          ),
+          url("assets/tablet/image-footer.jpg");
     }
 }
 
@@ -252,6 +248,10 @@ p {
     body {
         font-size: 1.1rem;
     }
+
+    #main-header {
+        margin-top: 80px;
+    }    
 
     #main-header .hero-container {
         display: flex;
@@ -308,7 +308,11 @@ p {
         margin: 0;
     }
 
-    #main-footer .main-footer__inner::after {
-        background-image: url("assets/desktop/image-footer.jpg");
+    #main-footer .main-footer__inner {
+        background-image: linear-gradient(
+            rgba(77, 150, 169, 0.9),
+            rgba(77, 150, 169, 0.9)
+          ),
+          url("assets/desktop/image-footer.jpg");
     }
 }
