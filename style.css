@@ -125,13 +125,13 @@ p {
     margin-bottom: 69px;
 }
 
-#section-1 h1 {
+#section-1 h2 {
     font-size: 2rem;
     max-width: 90%;
     margin: 16px auto;
 }
 
-#section-1 h2 {
+#section-1 h3 {
     color: #4D96A9;
     font-size: 1rem;
     text-transform: uppercase;
@@ -174,12 +174,12 @@ p {
     position: relative;
 }
 
-#main-footer h1,
+#main-footer h2,
 #main-footer p {
     margin: 8px;
 }
 
-#main-footer h1 {
+#main-footer h2 {
     color: #fafafa;
     max-width: 350px;
 }
@@ -230,12 +230,12 @@ p {
         justify-content: center;
     }
 
-    #section-1 h1 {
+    #section-1 h2 {
         font-size: 2.5rem;
-        max-width: 95%;
+        max-width: 75%;
     }
 
-    #main-footer h1 {
+    #main-footer h2 {
         font-size: 2.5rem;
     }
 
