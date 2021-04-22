@@ -232,7 +232,7 @@ p {
 
     #section-1 h1 {
         font-size: 2.5rem;
-        max-width: 75%;
+        max-width: 95%;
     }
 
     #main-footer h1 {
@@ -259,11 +259,13 @@ p {
 
     #main-header .container {
         margin: 0 90px;
-        max-width: 540px;
+        max-width: 560px;
     }
 
     #main-header .hero__title {
+        font-size: 4rem;
         margin-bottom: 16px;
+        max-width: 445px;
     }
 
     #main-header .hero__background {
