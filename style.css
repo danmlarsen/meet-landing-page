@@ -291,7 +291,7 @@ p {
     #main-footer .main-footer__inner .container {
         flex-direction: row;
         justify-content: space-between;
-        height: 308px;
+        min-height: 308px;
         max-width: 1110px;
     }
 
